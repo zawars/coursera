@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Coursera Assignment 1</title>
+
+    <script src="./angular.min.js"></script>
+    <script type="text/javascript" src="./app.js">
+    </script>
 </head>
-<body>
+<body ng-app="LunchCheck">
+  <div ng-controller="LunchCheckController">
+    <input type="text" name="meals" ng-model="meals"> <button type="button" ng-click="appState ? console.log('dt') : console.log('rt')" >Check If Too Much</button> <br>
+    <p ng-bind="info"></p>
+  </div>
 
 </body>
 </html>
