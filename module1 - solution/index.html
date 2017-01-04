@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Coursera Assignment 1</title>
+    <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css">
 
+    </script>
     <script src="./angular.min.js"></script>
     <script type="text/javascript" src="./app.js">
     </script>
 </head>
-<body ng-app="LunchCheck">
+<body class="container" ng-app="LunchCheck">
   <div ng-controller="LunchCheckController">
-    <input type="text" name="meals" ng-model="meals"> <button type="button" ng-click="appState ? console.log('dt') : console.log('rt')" >Check If Too Much</button> <br>
-    <p ng-bind="info"></p>
+    <br>
+    <form class="form-horizontal">
+      <label for="meals" class="control-label label label-primary">Enter Meals:</label>
+      <input ng-style="mealInput" class="form-control" id="meals" type="text" name="meals" ng-model="meals" autofocus=""><br>
+    <button class="btn btn-info" type="button" ng-click="checkMeals()" >Check If Too Much</button> &nbsp
+    <span ng-bind="comment"></span>
+  </form> <br>
+    <p ng-bind="info" ng-style="col"></p>
   </div>
 
 </body>
