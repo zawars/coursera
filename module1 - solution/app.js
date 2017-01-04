@@ -21,6 +21,7 @@
                       "border-width": "3px"
                     };
                     $scope.info = "Please enter data first.";
+                    $scope.comment = "";
                 } else {
                     meal = $scope.meals.split(",");
                     for(var i=0; i<meal.length; i++){
