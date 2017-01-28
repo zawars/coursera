@@ -1,7 +1,7 @@
 (function() {
     'use strict'
-    angular.module("LunchCheck", [])
-        .controller("LunchCheckController", ['$scope', function($scope) {
+    angular.module("LunchCheck", ['dx'])
+        .controller("LunchCheckController", ['$scope', 'treeView', function($scope, treeView) {
             $scope.info = "";
             $scope.meals = "";
             $scope.appState = true;
